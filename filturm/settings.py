@@ -13,14 +13,11 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 from pathlib import Path
 import dj_database_url
 import os
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
-# BASE_DIR = Path(__file__).resolve().parent.parent
-SETTING_PATH=os.path.dirname(os.path.dirname(__file__))
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+SETTING_PATH=os.path.dirname(os.path.dirname(__file__))
+
 
 SECRET_KEY = 'django-insecure-rcr0@nkiqzne=96417&78yj^v&(wfiumnmx5yrke%uuj2$l(5g'
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -160,5 +157,3 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 db_from_env = dj_database_url.config(conn_max_age=600)
 DATABASES['default'].update(db_from_env)
 
-    # handle the case where url.scheme is empty
-    # perhaps by setting a default value for engine
