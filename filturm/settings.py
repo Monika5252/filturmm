@@ -89,8 +89,8 @@ WSGI_APPLICATION = 'filturm.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'filturmdatabase',
-        'USER': 'userfilturm',
+        'NAME': 'filturmm',
+        'USER': 'filtuser',
         'PASSWORD': '123456',
         'HOST':'localhost',
         'PORT':'5432',
@@ -158,5 +158,5 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(db_from_env)
+# db_from_env = dj_database_url.config(conn_max_age=500)
+# DATABASES['default'].update(db_from_env)
