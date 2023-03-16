@@ -8,5 +8,6 @@ from django.contrib.auth.models import User
 admin.site.register(Mainfilturm)
 admin.site.register(filturm)
 admin.site.register(EmpLeave)
+admin.site.register(HrLogin)
 
 
